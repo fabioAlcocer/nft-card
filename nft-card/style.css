@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: 'Outfit', sans-serif;
+  font-size: 18px;
+  background-color: hsl(217, 54%, 11%);
+  display: grid;
+  place-items: center;
+}
+
+.card {
+  height: 500px;
+  width: 300px;
+  background-color: hsl(216, 50%, 16%);
+  padding: .1px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.card__img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.card__div::before {
+  content: "";
+  width: 260px;
+  height: 260px;
+  border-radius: 10px;
+  background-color: hsla(178, 100%, 50%, 0.479);
+  position: absolute;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity .5s ease;
+}
+
+.card__div:hover::before {
+  opacity: 1;
+  background-image: url(./images/icon-view.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: opacity .5s ease;
+}
+
+
+
+.card__main--title {
+  color: #fff;
+  font-weight: 600;
+  margin: 15px 0;
+  transition: color .4s ease;
+}
+
+.card__main--title:hover {
+  color: hsl(178, 100%, 50%);
+  cursor: pointer;
+  transition: color .4s ease;
+}
+
+.card__main--paragraph {
+  color: #627ba3;
+  line-height: 1.4;
+  font-size: 16px;
+}
+
+.card__stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.card__stats__eth {
+  display: flex;
+}
+
+.card__stats__eth--text {
+  color: hsl(178, 100%, 50%);
+  font-size: 14px;
+  margin-left: 5px;
+}
+
+
+.card__stats__date {
+  display: flex;
+}
+
+.card__stats__date--text {
+  color: #8bacd9;
+  font-size: 14px;
+  margin-left: 5px;
+}
+
+.card__footer {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #59709481;
+  padding: 15px 0;
+}
+
+.card__footer--img {
+  width: 28px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+}
+
+.card__footer--credits {
+  color: #627ba3;
+  font-size: 14px;
+  margin-left: 14px;
+}
+
+span {
+  color: #fff;
+  font-weight: 300;
+  margin-left: 2px;
+  transition: color .4s ease;
+}
+
+span:hover {
+  color: hsl(178, 100%, 50%);
+  cursor: pointer;
+  transition: color .4s ease;
+}
